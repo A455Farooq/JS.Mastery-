@@ -1,16 +1,18 @@
 {
   "name": "pareto-prosjekt",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "pareto.js",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "devDependencies": {
+    "vite": "^8.0.1"
+  },
   "dependencies": {
-    "gsap": "^3.14.2"
+    "gsap": "^3.12.5"
   }
 }
