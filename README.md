@@ -1,3 +1,5 @@
-# Hei, jeg heter Yasir Farooq !
+
+Hei, Haider hvordan går det med AI kurset ? 
+
 
 
