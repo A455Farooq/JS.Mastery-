@@ -22,6 +22,7 @@ body{
 .hac{
     min-height: 50vh;
     display: flex;
+    background-color: aqua;
     justify-content: center;
     align-items: center;
 }
@@ -31,4 +32,6 @@ body{
     width: 250px;
     border-radius: 100%;
     border: 2px solid orangered;
-};
+}
+
+
