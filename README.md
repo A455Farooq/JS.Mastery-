@@ -1,5 +1,6 @@
 
-Hei, Haider hvordan går det med AI kurset ? 
+Agenda for møte hvordan AI kan styre Anti hvitvasking risikostyrings forskriften!
+
 
 
 
