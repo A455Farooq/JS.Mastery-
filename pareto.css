@@ -12,7 +12,7 @@
 
 body{
     min-height: 100vh;
-    background: linear-gradient(165deg,#03c3b0,#032420);
+    background: linear-gradient(165deg,#010202,#032420);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,18 +20,22 @@ body{
 
 
 .hac{
-    min-height: 50vh;
     display: flex;
-    background-color: aqua;
     justify-content: center;
     align-items: center;
+    min-height: 90vh;
+    width: 85%;
 }
 
 .A{
-    height: 250px;
-    width: 250px;
-    border-radius: 100%;
-    border: 2px solid orangered;
+    height: 75vh;
+    width: 50%;
+    border: 2px salmon;
 }
 
+.B{
+    height: 75vh;
+    width: 50%;
+    border: 2px salmon;
+}
 
