@@ -26,15 +26,17 @@ body{
     min-height: 90vh;
     width: 85%;
     gap: 20px;
+   
 }
 
 .A{
     height: 75vh;
     border: 2px solid salmon;
     flex: 1;
+  
 }
 
-.B{
+.B img{
     height: 75vh;
     border: 2px solid salmon;
     flex: 1;
