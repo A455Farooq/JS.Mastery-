@@ -25,17 +25,19 @@ body{
     align-items: center;
     min-height: 90vh;
     width: 85%;
+    gap: 20px;
 }
 
 .A{
     height: 75vh;
-    width: 50%;
-    border: 2px salmon;
+    border: 2px solid salmon;
+    flex: 1;
 }
 
 .B{
     height: 75vh;
-    width: 50%;
-    border: 2px salmon;
+    border: 2px solid salmon;
+    flex: 1;
 }
+
 
