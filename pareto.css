@@ -21,12 +21,35 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-};
+    gap: 20px;
+}
 
 .A{
     height: 250px;
     width: 250px;
     background-color: aqua;
     border: solid 0.3px orangered;
+}
+
+.B{
+    height: 250px;
+    width: 250px;
+    background-color: aqua;
+    border: solid 0.3px orangered;
+
+}
+.C{
+    height: 250px;
+    width: 250px;
+    background-color: aqua;
+    border: solid 0.3px orangered;
+
+}
+.D{
+    height: 250px;
+    width: 250px;
+    background-color: aqua;
+    border: solid 0.3px orangered;
+    transform: scale(0.1);
 }
 
