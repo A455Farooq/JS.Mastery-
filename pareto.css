@@ -11,7 +11,21 @@
 
 body{
     min-height: 100vh;
-    background: linear-gradient(275deg,#474c85,#163962,#8969ba);
-    
+    background: linear-gradient(275deg,#474c85,#163962,#8969ba,#474c85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.ABC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+.A{
+    height: 250px;
+    width: 250px;
+    background-color: aqua;
+    border: solid 0.3px orangered;
+}
