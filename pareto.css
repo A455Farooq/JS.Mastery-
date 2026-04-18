@@ -9,37 +9,9 @@
 
 
 
-
 body{
     min-height: 100vh;
-    background: linear-gradient(165deg,#010202,#032420);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(275deg,#474c85,#163962,#8969ba);
+    
 }
-
-
-.hac{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-    width: 85%;
-    gap: 20px;
-   
-}
-
-.A{
-    height: 75vh;
-    border: 2px solid salmon;
-    flex: 1;
-  
-}
-
-.B img{
-    height: 75vh;
-    border: 2px solid salmon;
-    flex: 1;
-}
-
 
