@@ -55,10 +55,31 @@ body{
 }
 
 @media(max-width: 768px){
-  .D{
+  
+.A{
     height: 120px;
     width: 120px;
     background-color: crimson;
   }
+  
+.B{
+    height: 120px;
+    width: 120px;
+    background-color: rgb(2, 228, 73);
+  }
+
+.C{
+    height: 120px;
+    width: 120px;
+    background-color: rgb(31, 15, 83);
+  }
+
+.D{
+    height: 120px;
+    width: 120px;
+    background-color: rgb(69, 129, 129);
+  }
+
+
 }
 
