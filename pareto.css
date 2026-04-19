@@ -25,31 +25,43 @@ body{
 }
 
 .A{
-    height: 250px;
-    width: 250px;
-    background-color: aqua;
+    height: 350px;
+    width: 350px;
+    background: url('hac.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: solid 0.3px orangered;
     transform: scale(0.1);
 }
 
 .B{
-    height: 250px;
-    width: 250px;
-    background-color: aqua;
+    height: 350px;
+    width: 350px;
+    background: url('wine_glass_20260309224719_01.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: solid 0.3px orangered;
 
 }
 .C{
-    height: 250px;
-    width: 250px;
-    background-color: aqua;
+    height: 350px;
+    width: 350px;
+    background: url('bislett_kebab.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: solid 0.3px orangered;
 
 }
 .D{
-    height: 250px;
-    width: 250px;
-    background-color: rgb(255, 149, 0);
+    height: 350px;
+    width: 350px;
+    background: url('kurdiske_reven.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: solid 0.3px orangered;
     transform: scale(0.1);
 }
@@ -57,26 +69,26 @@ body{
 @media(max-width: 500px){
   
 .A{
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
     background-color: crimson;
   }
   
 .B{
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
     background-color: rgb(2, 228, 73);
   }
 
 .C{
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
     background-color: rgb(31, 15, 83);
   }
 
 .D{
-    height: 80px;
-    width: 80px;
+    height: 90px;
+    width: 90px;
     background-color: rgb(69, 129, 129);
   }
 
