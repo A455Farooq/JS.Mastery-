@@ -8,6 +8,12 @@ gsap.to('.D',{
 
 });
 
+gsap.to('.A',{
+ scale:1,
+ borderRadius:'50%',
+ duration:5
+
+});
 
  
   

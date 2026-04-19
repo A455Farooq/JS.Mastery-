@@ -29,6 +29,7 @@ body{
     width: 250px;
     background-color: aqua;
     border: solid 0.3px orangered;
+    transform: scale(0.1);
 }
 
 .B{
