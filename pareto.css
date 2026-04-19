@@ -57,26 +57,26 @@ body{
 @media(max-width: 500px){
   
 .A{
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     background-color: crimson;
   }
   
 .B{
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     background-color: rgb(2, 228, 73);
   }
 
 .C{
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     background-color: rgb(31, 15, 83);
   }
 
 .D{
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     background-color: rgb(69, 129, 129);
   }
 
