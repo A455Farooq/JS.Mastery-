@@ -54,7 +54,7 @@ body{
     transform: scale(0.1);
 }
 
-@media(max-width: 768px){
+@media(max-width: 500px){
   
 .A{
     height: 120px;
