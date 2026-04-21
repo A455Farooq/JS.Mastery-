@@ -11,87 +11,51 @@
 
 body{
     min-height: 100vh;
-    background: linear-gradient(275deg,#474c85,#163962,#8969ba,#474c85);
+    background: linear-gradient(275deg,#0c1039,#163962,#1c102f,#474c85);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ABC{
+
+.hac{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.A{
-    height: 350px;
-    width: 350px;
-    background: url('hac.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: solid 0.3px orangered;
-    transform: scale(0.1);
+h1{
+    color: aliceblue;
 }
 
-.B{
-    height: 350px;
-    width: 350px;
-    background: url('wine_glass_20260309224719_01.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: solid 0.3px orangered;
-
-}
-.C{
-    height: 350px;
-    width: 350px;
-    background: url('bislett_kebab.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: solid 0.3px orangered;
-
-}
-.D{
-    height: 350px;
-    width: 350px;
-    background: url('kurdiske_reven.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: solid 0.3px orangered;
-    transform: scale(0.1);
+.txtA{
+    opacity: 0;
+    scale: 0.1;
 }
 
-@media(max-width: 500px){
-  
-.A{
-    height: 90px;
-    width: 90px;
-    background-color: crimson;
-  }
-  
-.B{
-    height: 90px;
-    width: 90px;
-    background-color: rgb(2, 228, 73);
-  }
-
-.C{
-    height: 90px;
-    width: 90px;
-    background-color: rgb(31, 15, 83);
-  }
-
-.D{
-    height: 90px;
-    width: 90px;
-    background-color: rgb(69, 129, 129);
-  }
-
-
+.txtB{
+    opacity: 0;
+    scale: 0.1;
 }
 
+.txtC{
+    opacity: 0;
+    scale: 0.1;
+}
+
+.txtD{
+    opacity: 0;
+    scale: 0.1;
+}
+
+.didos{
+    opacity: 0;
+    scale: 0.1;
+}
+
+.nio{
+    opacity: 0;
+    scale: 0.1;
+}
