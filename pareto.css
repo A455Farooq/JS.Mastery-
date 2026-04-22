@@ -9,11 +9,6 @@
 
 
 
-body{
-    min-height: 100vh;
-    background: linear-gradient(275deg,#0c1039,#163962,#1c102f,#474c85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+
 
