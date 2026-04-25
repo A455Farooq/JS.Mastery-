@@ -79,50 +79,7 @@ body{
 
 
 
-@media (max-width: 768px){
-   
-    body{
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 20px 0;
-        gap: 20px;
-    }
 
-
-   .ai{
-    height: auto;
-    min-height: 300px;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-   }
-
-   .A{
-     width: 250px;
-     height: 250px;
-
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%,-50%);
-   }
-
-   .knappen{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-   }
-
-   .btn{
-    width: 90%;
-    max-width: 300px;
-    padding: 15px 30px;
-    font-size: 18px;
-    min-height: 48px;
-   }
-
-
-
-}
 
 
 
