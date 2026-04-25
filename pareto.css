@@ -12,21 +12,48 @@ body{
     min-height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: linear-gradient(145deg,#01151a,#02171d);
+    gap: 20px;
 }
 
 
 
 
+.ai{
+    height: 75vh;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid orangered;
+    position: relative;
+}
 
 
+.A{ 
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border: 3px solid red;
+}
 
+.btn{
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: aqua;
+    font-weight: bolder;
+    background: black;
+    cursor: pointer;
+}
 
-
-
-
+.btn:hover{
+    color: yellowgreen;
+}
 
 
 
