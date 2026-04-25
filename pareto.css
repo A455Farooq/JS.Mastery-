@@ -28,17 +28,28 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid orangered;
+    border: 2px solid rgb(200, 255, 0);
     position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 
 .A{ 
     position: absolute;
-    height: 500px;
-    width: 500px;
-    border: 3px solid red;
+    width: 100%;
+    height: 100%;
+
+    border: 10px solid red;
+    box-sizing: border-box;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    overflow: hidden;
 }
+
 
 .btn{
     padding: 10px;
@@ -54,6 +65,18 @@ body{
 .btn:hover{
     color: yellowgreen;
 }
+
+.bilde{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+
+
 
 
 @media (max-width: 768px){
