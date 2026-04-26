@@ -52,7 +52,7 @@ body{
 
 }
 
-.papi, .nypapi, .zipline{
+.papi, .nypapi, .zipline, .nio, .nioo, .niooo{
     position: absolute;
     top: 0;
     left: 0;
@@ -73,9 +73,21 @@ body{
     z-index: 2;
 }
 
+.zipline{
+    z-index: 4;
+}
 
+.nio{
+    z-index: 5;
+}
 
+.nioo{
+    z-index: 6;
+}
 
+.niooo{
+    z-index: 7;
+}
 
 
 

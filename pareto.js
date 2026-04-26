@@ -41,10 +41,20 @@ tl
    scale:1,
    duration:2,
    ease: 'power2.in'
-});
+})
 
+.to('.zipline',{
+    opacity:0,
+    duration:2,
+    ease: 'power2.in'
+},'+=1')
 
-
+.to('.nio',{
+   opacity:1,
+   scale:1,
+   duration:2,
+   ease: 'power2.in'
+})
 
 
 
