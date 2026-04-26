@@ -13,8 +13,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(75deg,#43CAF0,#1ABFEC,#0D81A1,#0A6078,#063F4F,#031D24);   
+    background: linear-gradient(75deg,#063F4F,#031D24);   
 }
+
+.easy{
+    color: aliceblue;
+    font-size: 45px;
+}
+
 
 .hac{
     height: 75vh;
