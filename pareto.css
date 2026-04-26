@@ -10,74 +10,68 @@
 
 body{
     min-height: 100vh;
-    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(145deg,#01151a,#02171d);
-    gap: 20px;
+    background: linear-gradient(75deg,#43CAF0,#1ABFEC,#0D81A1,#0A6078,#063F4F,#031D24);   
 }
 
-
-
-
-.ai{
+.hac{
     height: 75vh;
-    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgb(200, 255, 0);
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
 }
 
 
-.A{ 
-    position: absolute;
+.A{
+    height: 600px;
+    width: 880px;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    position: relative;
+
+
+}
+
+.pappo{
+ 
     width: 100%;
     height: 100%;
 
-    border: 10px solid red;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    position: relative;
 
-    overflow: hidden;
 }
 
-
-.btn{
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 15px;
-    color: aqua;
-    font-weight: bolder;
-    background: black;
-    cursor: pointer;
+.papi, .nypapi{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(0.1);
+    display: block;
+    will-change: opacity,transform;
 }
 
-.btn:hover{
-    color: yellowgreen;
+.nypapi{
+    z-index: 3;
 }
 
-.bilde{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
+.papi{
+    z-index: 2;
 }
-
-
-
-
-
-
 
 
 
