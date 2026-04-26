@@ -52,7 +52,7 @@ body{
 
 }
 
-.papi, .nypapi{
+.papi, .nypapi, .zipline{
     position: absolute;
     top: 0;
     left: 0;

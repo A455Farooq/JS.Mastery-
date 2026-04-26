@@ -9,13 +9,13 @@ tl
 .to('.papi',{
  opacity:1,
  scale:1,
- duration:5,
+ duration:3,
  ease:'power2.in'
 })
 
 .to('.papi',{
  opacity:0,
- duration:1,
+ duration:3,
  ease: 'power2.in'
 
 
@@ -26,12 +26,22 @@ tl
  opacity:1,
  scale:1,
  duration:2,
- ease: 'power2.inOut'
+ ease: 'power2.in'
 
 })
 
+.to('.nypapi',{
+    opacity:0,
+    duration:2,
+    ease: 'power2.in'
+}, '+=1')
 
-
+.to('.zipline',{
+   opacity:1,
+   scale:1,
+   duration:2,
+   ease: 'power2.in'
+});
 
 
 
