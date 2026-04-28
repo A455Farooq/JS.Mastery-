@@ -54,3 +54,52 @@ body{
     cursor: pointer;
 }
 
+.pbtn{
+     padding: 20px;
+    font-weight: bolder;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: yellowgreen;
+    background: black;
+    border-radius: 20%;
+    cursor: pointer;  
+}
+
+.pbtn:hover{
+    color: #063F4F;
+}
+
+.btn:hover{
+    color: #063F4F;
+}
+
+
+@media (max-width: 768px){
+ 
+     .A {
+        width: 250px;
+        height: 250px;
+     }
+
+
+     .btn, .pbtn {
+        width: 80%;
+        max-width: 300px;
+        font-size: 18px;
+        padding: 15px;
+        min-height: 48px;
+     }
+
+
+   .hac{
+    gap: 15px;
+    padding: 0 10px;
+    height: auto;
+    min-height: 75vh;
+   }
+
+
+
+
+}

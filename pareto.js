@@ -2,7 +2,11 @@
 import { gsap } from "gsap";
 
 
-gsap.to('.A',{
+const play = document.querySelector('.btn');
+const pause = document.querySelector('.pbtn');
+
+
+const anime = gsap.to('.A',{
 
 opacity:1,
 scale:1,
@@ -28,8 +32,16 @@ onComplete:()=>{
 
 
 
+play.addEventListener('click',()=>{
+
+  anime.play()
 
 
+});
+
+pause.addEventListener('click',()=>{
+    anime.pause()
+})
 
 
 
