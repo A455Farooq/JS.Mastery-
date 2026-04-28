@@ -2,59 +2,29 @@
 import { gsap } from "gsap";
 
 
-const tl = gsap.timeline();
+gsap.to('.A',{
 
-tl
+opacity:1,
+scale:1,
+duration:5,
+onComplete:()=>{
+   
+     gsap.to('.A',{
+       opacity:0.5,
+       scale:0.5,
+       duration:2,
+       rotateX:1440,
+       ease:'back.in'
 
-.to('.papi',{
- opacity:1,
- scale:1,
- duration:3,
- ease:'power2.in'
-})
+     });
 
-.to('.papi',{
- opacity:0,
- duration:3,
- ease: 'power2.in'
+}
 
 
-}, '+=1')
 
 
-.to('.nypapi',{
- opacity:1,
- scale:1,
- duration:2,
- ease: 'power2.in'
+});
 
-})
-
-.to('.nypapi',{
-    opacity:0,
-    duration:2,
-    ease: 'power2.in'
-}, '+=1')
-
-.to('.zipline',{
-   opacity:1,
-   scale:1,
-   duration:2,
-   ease: 'power2.in'
-})
-
-.to('.zipline',{
-    opacity:0,
-    duration:2,
-    ease: 'power2.in'
-},'+=1')
-
-.to('.nio',{
-   opacity:1,
-   scale:1,
-   duration:2,
-   ease: 'power2.in'
-})
 
 
 
