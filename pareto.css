@@ -42,10 +42,18 @@ body{
 }
 
 
+.samling{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
 .btn{
     padding: 20px;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 15px;
     border: none;
     outline: none;
     color: yellowgreen;
@@ -57,7 +65,20 @@ body{
 .pbtn{
      padding: 20px;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color: yellowgreen;
+    background: black;
+    border-radius: 20%;
+    cursor: pointer;  
+}
+
+
+.rsm{
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 15px;
     border: none;
     outline: none;
     color: yellowgreen;
@@ -74,6 +95,9 @@ body{
     color: #063F4F;
 }
 
+.rsm:hover{
+ color: #063F4F;
+}
 
 @media (max-width: 768px){
  
@@ -83,7 +107,7 @@ body{
      }
 
 
-     .btn, .pbtn {
+     .btn, .pbtn .rsm {
         width: 80%;
         max-width: 300px;
         font-size: 18px;
