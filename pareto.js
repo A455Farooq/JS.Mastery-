@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 
 const play = document.querySelector('.btn');
 const pause = document.querySelector('.pbtn');
+const resume = document.querySelector('.rsm')
+const restart = document.querySelector('.restart')
 
 
 const anime = gsap.to('.A',{
@@ -29,21 +31,21 @@ onComplete:()=>{
 
 });
 
-
-
-
 play.addEventListener('click',()=>{
-
   anime.play()
-
-
 });
 
 pause.addEventListener('click',()=>{
     anime.pause()
 })
 
+resume.addEventListener('click',()=>{
+   anime.resume()
+});
 
+restart.addEventListener('click',()=>{
+   anime.restart()
+});
 
 
 

@@ -87,6 +87,22 @@ body{
     cursor: pointer;  
 }
 
+.restart{
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color: yellowgreen;
+    background: black;
+    border-radius: 20%;
+    cursor: pointer;  
+}
+
+.restart:hover{
+    color: #031D24;
+}
+
 .pbtn:hover{
     color: #063F4F;
 }
