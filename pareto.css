@@ -19,127 +19,41 @@ body{
 
 
 .hac{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-    gap: 20px;
+    height: 85vh;
+    width: 80%;
+    border: 2px solid #4BA10D;
+    position: relative;
 }
 
 .A{
-    height: 600px;
-    width: 600px;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #6CD6F3;
-    border: 2px solid orangered;
-    opacity: 0;
-    transform: scale(0.1);
+   height: 250px;
+   width: 250px;
+   border: 2px solid rgb(255, 106, 0);
+   border-radius: 100%;
+   position: absolute;
 }
 
-
-.samling{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+.B{
+   height: 250px;
+   width: 250px;
+   border: 2px solid rgb(255, 106, 0);
+   border-radius: 100%;
+   position: absolute;
 }
 
-
-.btn{
-    padding: 20px;
-    font-weight: bolder;
-    font-size: 15px;
-    border: none;
-    outline: none;
-    color: yellowgreen;
-    background: black;
-    border-radius: 20%;
-    cursor: pointer;
+.C{
+   height: 250px;
+   width: 250px;
+   border: 2px solid rgb(255, 106, 0);
+   border-radius: 100%;
+   position: absolute;
 }
 
-.pbtn{
-     padding: 20px;
-    font-weight: bolder;
-    font-size: 15px;
-    border: none;
-    outline: none;
-    color: yellowgreen;
-    background: black;
-    border-radius: 20%;
-    cursor: pointer;  
+.D{
+   height: 250px;
+   width: 250px;
+   border: 2px solid rgb(255, 106, 0);
+   border-radius: 100%;
+   position: absolute;
 }
 
-
-.rsm{
-    padding: 20px;
-    font-weight: bolder;
-    font-size: 15px;
-    border: none;
-    outline: none;
-    color: yellowgreen;
-    background: black;
-    border-radius: 20%;
-    cursor: pointer;  
-}
-
-.restart{
-    padding: 20px;
-    font-weight: bolder;
-    font-size: 15px;
-    border: none;
-    outline: none;
-    color: yellowgreen;
-    background: black;
-    border-radius: 20%;
-    cursor: pointer;  
-}
-
-.restart:hover{
-    color: #031D24;
-}
-
-.pbtn:hover{
-    color: #063F4F;
-}
-
-.btn:hover{
-    color: #063F4F;
-}
-
-.rsm:hover{
- color: #063F4F;
-}
-
-@media (max-width: 768px){
- 
-     .A {
-        width: 250px;
-        height: 250px;
-     }
-
-
-     .btn, .pbtn, .rsm, .restart {
-        width: 80%;
-        max-width: 250px;
-        font-size: 15px;
-        padding: 15px;
-        min-height: 40px;
-     }
-
-
-   .hac{
-    gap: 15px;
-    padding: 0 10px;
-    height: auto;
-    min-height: 75vh;
-   }
-
-
-
-
-}
