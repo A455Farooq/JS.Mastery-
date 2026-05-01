@@ -57,3 +57,20 @@ body{
    position: absolute;
 }
 
+.btn{
+    color: aliceblue;
+    position: absolute;
+    top: 500px;
+    left: 1000px;
+    
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: #4BA10D;
+    border: none;
+    outline: none;
+}
+
+
+
