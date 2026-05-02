@@ -76,7 +76,7 @@ body{
 
 
 
-@media (max-widt: 760px){
+@media (max-width: 760px){
 
 .A, .B, .C, .D{
  
@@ -85,6 +85,5 @@ body{
 }
 
 
-
-
 }
+
