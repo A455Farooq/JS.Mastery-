@@ -74,3 +74,17 @@ body{
 
 
 
+
+
+@media (max-widt: 760px){
+
+.A, .B, .C, .D{
+ 
+     height: 50px;
+     width: 50px;
+}
+
+
+
+
+}
