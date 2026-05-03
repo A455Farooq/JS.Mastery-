@@ -53,7 +53,7 @@ header h1{
 
 @media(max-width:700px){
  
-     .delB{
+     .delB img{
         width: 120px;
         height: 120px;
         gap: 10px;
@@ -66,3 +66,4 @@ header h1{
      }
 
 }
+
