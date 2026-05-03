@@ -8,86 +8,36 @@
 
 
 
-body{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(175deg,#031D24,#063F4F);
-}
-
-
-.hac{
-    height: 85vh;
-    width: 80%;
-    border: 2px solid #4BA10D;
-    position: relative;
-}
-
-.A{
-   height: 250px;
-   width: 250px;
-   border: 2px solid rgb(255, 106, 0);
-   border-radius: 100%;
-   position: absolute;
-}
-
-.B{
-   height: 250px;
-   width: 250px;
-   border: 2px solid rgb(255, 106, 0);
-   border-radius: 100%;
-   position: absolute;
-}
-
-.C{
-   height: 250px;
-   width: 250px;
-   border: 2px solid rgb(255, 106, 0);
-   border-radius: 100%;
-   position: absolute;
-}
-
-.D{
-   height: 250px;
-   width: 250px;
-   border: 2px solid rgb(255, 106, 0);
-   border-radius: 100%;
-   position: absolute;
-}
-
-.btn{
+.AI{
+    background: linear-gradient(180deg,#112403,#254F06,#34012f,#0d5ea1,#10caa8);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: aliceblue;
-    position: absolute;
-    top: 500px;
-    left: 1000px;
-    
 }
 
-.btn:hover{
-    cursor: pointer;
-    color: #4BA10D;
-    border: none;
-    outline: none;
+h3{
+    margin-bottom: 10px;
+    border: 2px solid lightpink;
+}
+
+section{
+    border: 2px solid orange;
+    padding: 45px 0;
+    background: yellow;
+
+}
+
+section img{
+    border: 10px solid red;
+  
 }
 
 
 
 
 
-@media (max-width: 760px){
 
-.A, .B, .C, .D{
- 
-     height: 50px;
-     width: 50px;
-}
 
-.hac{
-  height: 50vh;
-  width: 50%;
-}
-
-}
 
