@@ -8,62 +8,27 @@
 
 
 
-.info{
-    background: linear-gradient(165deg,#F0FDE7,#D7FABE,#BEF695,#A4F36C,#8BF043,#72EC1A,#5ECA10,#38780A,#254F06,#112403);
-    padding: 45px 10px;
-    margin-top: 20px;
-    margin-left: 250px;
-    margin-right: 250px;
-}
-
-
-
-header h1{
-    color: whitesmoke;
-    padding: 20px 0;
-    text-align: center;
-    background: linear-gradient(275deg,#06464F,#032024);
-}
-
-
-.delB{
+.bilder{
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
+    flex-direction: row;
+}
+
+.bilder img{
+    width: 150px;
+    height: 150px;
     box-sizing: border-box;
-}
-
-.delB img{
-    width: 500px;
-    height: 550px;
     object-fit: cover;
-    border-radius: 12px;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.delB img:hover{
-    transform: scale(1.05);
-    cursor: pointer;
+    
 }
 
 
-@media(max-width:700px){
- 
-     .delB img{
-        width: 120px;
-        height: 120px;
-        gap: 10px;
-     }
 
-     .info{
-        width: 200px;
-        height: 200px;
-        text-align: center;
-     }
 
-}
+
+
+
+
+
+
 
