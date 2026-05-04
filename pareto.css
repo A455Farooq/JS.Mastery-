@@ -13,6 +13,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(275deg,#032024,#06464F);
+    color: aliceblue;
 }
 
 .container h2{
