@@ -11,7 +11,14 @@ gsap.to('.a',{
 
 
 
-
+gsap.to('.b',{
+    opacity:1,
+    y:90,
+    scale:2,
+    ease:"power2.out",
+    delay:1,
+    duration:5
+})
 
 
 
