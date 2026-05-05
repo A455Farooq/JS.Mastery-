@@ -6,41 +6,22 @@
     font-family: "Orbitron", sans-serif;
 }
 
-.container{
-    padding: 45px 10px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(275deg,#032024,#06464F);
+.A{
+    height: 15vh;
+    border: 2px solid orangered;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 45px;
+    background: linear-gradient(189deg,#012327,#07282c,#032024);
     color: aliceblue;
+  
 }
 
-.container h2{
-    padding: 20px;
-}
-.bilder{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 20px;
-  box-sizing: border-box;
+.a{
+    opacity: 0;
 }
 
-.bilder img{
- width: 200px;
- height: 200px;
- object-fit: cover;
- border-radius: 12px;
- border: 3px solid #fff;
- box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
- display: block;
- transition: transform 0.3s ease;
 
-}
 
 
 
