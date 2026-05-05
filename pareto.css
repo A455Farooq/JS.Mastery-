@@ -8,7 +8,6 @@
 
 .A{
     height: 15vh;
-    border: 2px solid orangered;
     text-align: center;
     padding-top: 20px;
     font-size: 45px;
@@ -34,7 +33,7 @@
 @media (max-width:780px){
    
   .a{
-    font-size: 10px;
+    font-size: 40px;
   }
 
 
