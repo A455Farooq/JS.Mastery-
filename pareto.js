@@ -21,6 +21,25 @@ gsap.to('.b',{
 })
 
 
+gsap.to('.nini',{
+  y:210,
+  x:1600,
+  scale:1.2,
+  ease:"power2.out",
+  delay:2,
+  duration:3
+
+});
+
+gsap.to('.nono',{
+ x:1100,
+ y:110,
+ scale:1.2,
+ ease:"power2.out",
+ delay:2.5,
+ duration:3,
+
+});
 
 
 
