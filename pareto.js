@@ -41,6 +41,13 @@ gsap.to('.nono',{
 
 });
 
-
+gsap.to('.dodo',{
+    x:560,
+    scale:1.2,
+    y:10,
+    ease:"power2.out",
+    delay:3,
+    duration:3
+})
 
 
