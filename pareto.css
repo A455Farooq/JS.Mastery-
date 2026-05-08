@@ -6,86 +6,48 @@
     font-family: "Orbitron", sans-serif;
 }
 
-.A{
-    height: 15vh;
-    text-align: center;
-    padding-top: 20px;
-    font-size: 45px;
-    background: linear-gradient(189deg,#012327,#07282c,#032024);
-    color: aliceblue;
-  
+.hac{
+    min-height: 100vh;
+    background: linear-gradient(190deg,#12043D,#22899C);
+    border: 25px soldi rgb(247, 0, 255);
+    position: relative;
+    gap: 10px;
+
 }
 
-.a{
-    opacity: 0;
+
+.A{
+    height: 100px;
+    width: 100px;
+    border: 2px solid rgb(0, 255, 47);
+    position: absolute;
+    left: 1000px;
+    top: 300px;
 }
 
 .B{
-    height: 45vh;
-    text-align: center;
-    padding-top: 10px;
-    font-size: 50px;
-    background: linear-gradient(275deg,#210871,#08021C);
-    color: aqua;
+    height: 100px;
+    width: 100px;
+    border: 2px solid rgb(0, 255, 47);
+    position: absolute;
+    left: 1000px;
 }
 
-
-.b{
-    opacity: 0;
+.C{
+    height: 100px;
+    width: 100px;
+    border: 2px solid rgb(0, 255, 47);
+    position: absolute;
+    left: 1000px;
 }
 
-
-
-
-.nini{
-  height: 100px;
-  width: 100px;
-  border-radius: 100%;
-  background-color: aqua;
+.D{
+    height: 100px;
+    width: 100px;
+    border: 2px solid rgb(0, 255, 47);
+    position: absolute;
+    left: 1000px;
 }
-
-.nono{
-  height: 100px;
-  width: 100px;
-  border-radius: 100%;
-  background-color: aqua;   
-}
-
-.dodo{
-  height: 100px;
-  width: 100px;
-  border-radius: 100%;
-  background-color: aqua;   
-}
-
-
-
-@media (max-width:780px){
-   
-  .a{
-    font-size: 30px;
-  }
-  .b{
-    font-size: 10px;
-  }
-
-  .container{
-    width: 500px;
-  }
-  
-  .nini, .nono, .dodo{
-    height: 10px;
-    width: 10px;
-  }
-
-}
-
-
-
-
-
-
-
 
 
 
