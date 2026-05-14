@@ -3,8 +3,3 @@ import { gsap } from "gsap";
 
 
 
-
-
-
-
-

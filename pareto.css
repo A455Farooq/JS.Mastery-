@@ -6,24 +6,44 @@
     font-family: "Orbitron", sans-serif;
 }
 
-
 body{
- 
- height: 100vh;
- width: 100vw;
- background-color: black;
- margin: 0rem;
- overflow: hidden;
- 
+    background: #021318;
+}
+
+.container{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45vh;
+    gap: 40px;
 }
 
 
-
-#image-track > .image{
-    width: 40vmin;
-    height: 56vmin;
-    object-fit: cover;
-    object-position: center;
+.delA{
+    flex: 1 1 60%;
+    background: linear-gradient(275deg,#021318,#0A7899,#0a5166,#043443,#043443,#021318);
+    color: ghostwhite;
+    padding: 40px 5%;
+    border-radius: 12px;
+    box-sizing: border-box;
 }
 
+.delB{
+  flex: 0 0 35%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.delB img{
+ height: auto;
+ max-height: 300px;
+ width: auto;
+ max-width: 100%;
+ object-fit: contain;
+}
 
