@@ -21,22 +21,23 @@ body{
 
 
 .delA{
-    flex: 1 1 60%;
+    flex: 1 1 50%;
     background: linear-gradient(275deg,#021318,#0A7899,#0a5166,#043443,#043443,#021318);
     color: ghostwhite;
     padding: 40px 5%;
     border-radius: 12px;
     box-sizing: border-box;
+    border: 10px solid navajowhite;
 }
 
 .delB{
-  flex: 0 0 35%;
+  flex: 0 0 45%;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
   align-items: center;
-
+  border: 10px solid navajowhite;
 }
 
 .delB img{
