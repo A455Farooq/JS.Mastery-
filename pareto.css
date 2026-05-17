@@ -1,50 +1,53 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Happy+Monkey&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Orbitron&family=Outfit:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-    font-family: "Orbitron", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
+
+
 
 body{
-    background: #021318;
-}
-
-.container{
-
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    height: 45vh;
-    gap: 40px;
+    text-align: center;
+    background: #06485C;
+    gap: 10px;
 }
 
 
-.delA{
-    flex: 1 1 50%;
-    background: linear-gradient(275deg,#021318,#0A7899,#0a5166,#043443,#043443,#021318);
-    color: ghostwhite;
-    padding: 40px 5%;
-    border-radius: 12px;
-    box-sizing: border-box;
-    border: 10px solid navajowhite;
+
+.containerA{
+    background: linear-gradient(275deg,#06485C,#3AC8F2,#0D9AC5,#06485C);
+    margin-top: 100px;
+    padding: 50px 270px;
+    color: #011409;
+}
+
+.delA {
+   
+    min-height: 10vh;
+    padding: 25px 200px;
+  
+}
+
+.delA p {
+  color: aliceblue;
+  font-size: 40px;
+  opacity: 0;
+  transform: scale(0.1);
+  will-change: transform,opacity;
+
 }
 
 .delB{
-  flex: 0 0 45%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  border: 10px solid navajowhite;
-}
-
-.delB img{
- height: auto;
- max-height: 300px;
- width: auto;
- max-width: 100%;
- object-fit: contain;
+    min-height: 45vh;
+    border: 10px solid red;
 }
 
