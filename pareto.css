@@ -11,43 +11,40 @@
 
 
 
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: #06485C;
-    gap: 10px;
-}
-
-
-
 .containerA{
-    background: linear-gradient(275deg,#06485C,#3AC8F2,#0D9AC5,#06485C);
-    margin-top: 100px;
-    padding: 50px 270px;
-    color: #011409;
+    min-height: 25vh;
+    background: linear-gradient(300deg,#66F5EE,#021817,#66F5EE,#3AF2E9,#0FF0E4,#0A9992,#0A9992,#065C58,#044340,#021817);
+    text-align: center;
 }
 
-.delA {
-   
-    min-height: 10vh;
-    padding: 25px 200px;
-  
+.delA{
+    padding: 45px 250px;
+    font-size: 25px;
 }
 
-.delA p {
-  color: aliceblue;
-  font-size: 40px;
-  opacity: 0;
-  transform: scale(0.1);
-  will-change: transform,opacity;
-
+.containerB{
+    height: 45vh;
+    background: #01050c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .delB{
-    min-height: 45vh;
-    border: 10px solid red;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
+.delB img{
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0, 0, 0, 0.5);
+  
+}
