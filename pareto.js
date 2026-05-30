@@ -2,18 +2,35 @@
 import { gsap } from "gsap";
 
 
+if(true){
+    console.log('Pareto securities');
 
-gsap.to('.A h1',{
-    opacity:1,
-    ease:'sine.inOut',
-    duration:6
-})
+}else{
+    console.log('Arctic securities');
+}
 
 
-gsap.to('.B img',{
-    opacity:1,
-    scale:1,
-    ease:'sine.inOut',
-    duration:6  
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
