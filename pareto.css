@@ -20,12 +20,40 @@
 .A{
     height: 500px;
     width: 500px;
-    border: 10px solid black;
+    
     margin-left: 900px;
     margin-top: 250px;
     position: absolute;
+   
     
 }
 
+.B{
+    background: #0A5B99;
+    color: #91CBF8;
+    padding: 10px;
+    top: 100px;
+    left: 200px;
+    position: absolute;
+
+}
+
+.C{
+    background: #06375C;
+    color: #66B7F5;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+
+.D{
+    background: #0A5B99;
+    color: aliceblue;
+    padding: 10px;
+    position: absolute;
+    top: 180px;
+}
 
 
