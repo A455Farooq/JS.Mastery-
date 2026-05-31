@@ -10,18 +10,21 @@
 }
 
 
-
 .display{
-    height: 100vh;
-    background: linear-gradient(185deg,#FCE7FD,#F5BCFB,#F5BCFB,#E966F5,#E966F5,#E966F5,#8D0A99);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(287deg,#BCDFFB,#91CBF8,#66B7F5,#3AA3F2,#0F8EF0,#0D75C5,#0A5B99,#06375C,#042843);
+    position: relative;
+
 }
 
-.control{
-    padding-top: 25px;
-    font-size: 45px;
+.A{
+    height: 500px;
+    width: 500px;
+    border: 10px solid black;
+    margin-left: 900px;
+    margin-top: 250px;
+    position: absolute;
+    
 }
 
 
