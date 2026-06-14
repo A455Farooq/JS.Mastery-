@@ -12,48 +12,22 @@
 
 .display{
     min-height: 100vh;
-    background: linear-gradient(287deg,#BCDFFB,#91CBF8,#66B7F5,#3AA3F2,#0F8EF0,#0D75C5,#0A5B99,#06375C,#042843);
-    position: relative;
-
+    background: linear-gradient(365deg,#a4133c,#590d22,#c9184a,#593f62,#7b6d8d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.A{
+.okidoki{
+    min-height: 50vh;
+    position: absolute;
+}
+
+.bilde{
+    position: relative;
     height: 500px;
     width: 500px;
-    
-    margin-left: 900px;
-    margin-top: 250px;
-    position: absolute;
-   
-    
+    opacity: 0.1;
+    transform: scale(0.1);
 }
-
-.B{
-    background: #0A5B99;
-    color: #91CBF8;
-    padding: 10px;
-    top: 100px;
-    left: 200px;
-    position: absolute;
-
-}
-
-.C{
-    background: #06375C;
-    color: #66B7F5;
-    padding: 10px;
-    position: absolute;
-    top: 20px;
-    left: 10px;
-}
-
-
-.D{
-    background: #0A5B99;
-    color: aliceblue;
-    padding: 10px;
-    position: absolute;
-    top: 180px;
-}
-
 
