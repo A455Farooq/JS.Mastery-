@@ -9,6 +9,10 @@
     font-family: "Roboto", sans-serif;
 }
 
+body{
+    background: black;
+}
+
 
 .display{
     height: 100vh;
@@ -25,7 +29,12 @@
     height: 650px;
     width: 700px;
     border: 2px solid orangered;
+
 }
 
 
 
+.A img{
+   height: 500px;
+   width: 500px;
+}
