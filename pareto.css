@@ -11,23 +11,21 @@
 
 
 .display{
-    min-height: 100vh;
-    background: linear-gradient(365deg,#a4133c,#590d22,#c9184a,#593f62,#7b6d8d);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
+    border: 10px solid black;
 }
 
-.okidoki{
-    min-height: 50vh;
-    position: absolute;
+.A{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; 
+    height: 650px;
+    width: 700px;
+    border: 2px solid orangered;
 }
 
-.bilde{
-    position: relative;
-    height: 500px;
-    width: 500px;
-    opacity: 0.1;
-    transform: scale(0.1);
-}
+
 
