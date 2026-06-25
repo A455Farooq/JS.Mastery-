@@ -2,21 +2,34 @@
 import { gsap } from "gsap";
 
 
-confirm('Velkommen til bislett Kebab');
 
 
-let kundevalg = confirm('vanlig kebab = ok \nkylling kebab = cancel');
+gsap.to('.A',{
+   x:100,
+   scale:-0.5,
+   ease:'sine.inOut',
+   duration:2 
+})
 
+gsap.to('.B',{
+  x:200,
+  scale:-0.5,
+  ease:'sine.inOut',
+  duration:3.5,    
+})
 
-if(kundevalg){
-    confirm('valgt produkt vanlig kebab = pris 100,00 NOK')
-}
-
-
-
-
-
-
+gsap.to('.C',{
+ x:300,
+ y:100,
+ scale:-0.5,
+ ease:'sine.inOut',
+ duration:3.1,onComplete:()=>{
+    gsap.to('.C',{
+      y:300,
+      x:500
+    })
+ }
+})
 
  
 

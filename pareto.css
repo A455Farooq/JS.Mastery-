@@ -9,32 +9,37 @@
     font-family: "Roboto", sans-serif;
 }
 
-body{
-    background: black;
-}
 
 
 .display{
-    height: 100vh;
-    border: 10px solid black;
+    min-height:100vh;
+    background:linear-gradient(165deg,#023e8a,#560bad,#8164c0);
+    position: relative;
 }
+
 
 .A{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto; 
-    height: 650px;
-    width: 700px;
-    border: 2px solid orangered;
+height: 500px;
+width: 500px;
+border: 10px solid yellowgreen;
+border-radius: 100%;
+position: absolute;
+}
 
+.B{
+height: 500px;    
+width: 500px;
+border: 10px solid rgb(247, 0, 255);
+border-radius: 100%;
+position: absolute;
+}
+
+.C{
+height: 500px;
+width: 500px;
+border: 10px solid rgb(0, 195, 255);
+border-radius: 100%;
+position: absolute;
 }
 
 
-
-.A img{
-   height: 500px;
-   width: 500px;
-}
