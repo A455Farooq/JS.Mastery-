@@ -10,36 +10,25 @@
 }
 
 
-
 .display{
-    min-height:100vh;
-    background:linear-gradient(165deg,#023e8a,#560bad,#8164c0);
-    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(185deg,#0096c7,#005f73,#001d3d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .A{
-height: 500px;
-width: 500px;
-border: 10px solid yellowgreen;
-border-radius: 100%;
-position: absolute;
+    height: 500px;
+    width: 500px;
+    border: 10px solid tomato;
+    overflow: hidden;
 }
 
-.B{
-height: 500px;    
-width: 500px;
-border: 10px solid rgb(247, 0, 255);
-border-radius: 100%;
-position: absolute;
-}
-
-.C{
-height: 500px;
-width: 500px;
-border: 10px solid rgb(0, 195, 255);
-border-radius: 100%;
-position: absolute;
+.A img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 
