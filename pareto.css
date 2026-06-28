@@ -19,8 +19,9 @@
 }
 
 .A{
-    height: 500px;
-    width: 500px;
+    width: 90%;
+    max-width: 500px;
+
     border: 10px solid tomato;
     overflow: hidden;
 }
@@ -30,5 +31,22 @@
     height: 100%;
     object-fit: contain;
 }
+
+
+@media (max-width: 600px){
+  .A{
+    width: 95%;
+    border-width: 5px;
+
+  }
+
+}
+
+@media (max-width: 1200px){
+    .A{
+        max-width: 700px;
+    }
+}
+
 
 
