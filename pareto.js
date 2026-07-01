@@ -2,22 +2,22 @@
 import { gsap } from "gsap";
 
 
-console.log('brukeren er logget inn');
 
-setTimeout(function(){
+gsap.to('.B',{
+   y:250,
+   duration:2,
+   ease:'sine.inOut'
+ 
 
- console.log('anti hvit vasking risikostyrings indikator')
-
-},3000);
-
-console.log('data xyz');
-
+})
 
 
 
-
-
-
+gsap.to('.C',{
+    x:250,
+    duration:2,
+    ease:'sine.inOut'
+})
 
 
 
