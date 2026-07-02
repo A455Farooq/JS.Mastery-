@@ -10,46 +10,12 @@
 }
 
 
-body{
-    background: linear-gradient(195deg,#0a0908,#1c2541,#480ca8);
-}
-
-
-.knapper{
-
+.display{
     min-height: 100vh;
-    width: 90%;
-    margin: 0 auto;
-    border: 2px solid brown;
- 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-
+    background: linear-gradient(265deg,#001c55,#212529,#360000,#1b0033);
 }
 
-.A,.B,.C{
 
-    width: 28%;
-    max-width: 200px;
-    aspect-ratio: 1/1;
-   
-
-    border: none;
-    outline: none;
-   
-
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 100%;
-    background: linear-gradient(245deg,#1a7f85,#b5179e);
-    font-weight: bold;
-    font-size: 16px;
-    position: absolute;
-    cursor: pointer;
-}
 
 
 
