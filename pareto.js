@@ -82,8 +82,6 @@ if(erCAnimert === false){
 }
 
 
-
-
 });
 
 

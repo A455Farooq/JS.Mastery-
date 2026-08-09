@@ -61,6 +61,13 @@
 .A{
     background: linear-gradient(195deg,#b5ffe1,#caf0f8);
 }
+.B{
+  background: linear-gradient(201deg,#ffc6ff,#e2e4f6);
+}
+.C{
+  background: linear-gradient(165deg,#ce7b91,#b8d3d1);   
+}
+
 
 
 .bi,.bii,.biii{
