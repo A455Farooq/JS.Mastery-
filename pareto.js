@@ -8,16 +8,16 @@ const slideImages = Array.from(
   (_, i) => `img${i + 1}.jpg`,
 );
 const slideTitles = [
-  "Silent Bloom",
-  "Tin Vessel",
-  "Iris Study",
-  "The Observer",
-  "Soft Static",
-  "Blue Descent",
-  "Still Life No.7",
-  "Nape",
-  "Voltage",
-  "Distant Wall",
+  "Haider 01",
+  "Haider 02",
+  "Haider 03",
+  "Haider 04",
+  "Haider 05",
+  "Haider 06",
+  "Haider 07",
+  "Haider 08",
+  "Haider 09",
+  "Haider 10",
 ];
 
 const slider = document.querySelector(".slider");
