@@ -10,67 +10,81 @@
 }
 
 
-
-.scroll-to-top{
-
-
+.slider{
     position: fixed;
-    bottom: 45px;
-    right: 50px;
-    height: 75px;
-    width: 75px;
-    border-radius: 100%;
-    border: none;
-    font-size: 55px;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
-    transition: 0.3s ease;
+    width: 100%;
+    height: 100svh;
+    perspective: 2000px;
+    background: #eaeaea;
+    overflow: hidden;
+    
+    
+}
 
-    background: linear-gradient(295deg,#47a4db,#165c35);
+.stage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    
+}
 
-    z-index: 100;
-
-    opacity: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.orbit{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100px;
+  height: 125px;
+  transform-style: preserve-3d;
+  
   
 }
 
-.show{
-    opacity: 1;
+.panel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.scroll-to-top:hover{
-    background: linear-gradient(245deg,#2ed8de,#26033b);
-    transform: scale(1.1);
+.panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.A, .B, .C{
-    height: 800px;
-    border-bottom: 2px solid gray;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.preview{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 325px;
+    overflow: hidden;
+   
 }
 
-.A{
-    background: linear-gradient(195deg,#b5ffe1,#caf0f8);
-}
-.B{
-  background: linear-gradient(201deg,#ffc6ff,#e2e4f6);
-}
-.C{
-  background: linear-gradient(165deg,#ce7b91,#b8d3d1);   
+.preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
+.title{
+    position: fixed;
+    bottom: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    background-color: #00fb47;
+    color: #000000;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    
 
-
-.bi,.bii,.biii{
-    font-size: 80px;
-    opacity: 0;
 }
