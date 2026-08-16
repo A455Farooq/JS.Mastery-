@@ -20,7 +20,7 @@ const slideTitles = [
   "DM Regnskap Oslo AS = HØY RISIKO RAPPORT",
   "KAPITAL REGNSKAP AS = MIDDEL RISIKO RAPPORT",
   "KRYNICKA REGNSKAP AS = MIDDEL RISIKO RAPPORT ",
-  "NOR FORVALTNING REGNSKAP AS = HØY RISIKO RAPPORT",
+  "nor forvalning AS= HØY RISIKO RAPPORT",
 ];
 
 const slider = document.querySelector(".slider");
