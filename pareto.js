@@ -1,108 +1,200 @@
 
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
+
+gsap.registerPlugin(ScrollTrigger);
 
 
-const totalSlides = 10;
-const slideImages = Array.from(
-  { length: totalSlides },
-  (_, i) => `img${i + 1}.jpg`,
-);
-const slideTitles = [
-  "Haider 01",
-  "Haider 02",
-  "Haider 03",
-  "Haider 04",
-  "Haider 05",
-  "Haider 06",
-  "Haider 07",
-  "Haider 08",
-  "Haider 09",
-  "Haider 10",
+/*
+
+const repeat = document.querySelector(".repeat");
+
+
+const data = [
+  { label: "Mon", value: 80 },
+  { label: "Tue", value: 60 },
+  { label: "Wed", value: 100 },
+  { label: "Thu", value: 70 },
+  { label: "Fri", value: 90 },
+  { label: "Sat", value: 50 },
+  { label: "Sun", value: 65 },
 ];
 
-const slider = document.querySelector(".slider");
-const stage = document.querySelector(".stage");
-const orbit = document.querySelector(".orbit");
-const previewBox = document.querySelector(".preview");
-const titleTag = document.querySelector(".title");
+const chart = document.getElementById("chart");
 
-const orbitRadius = 400;
-const angleBetweenSlides = 360 / totalSlides;
 
-slideImages.forEach((imageSrc, slideNumber) => {
-  const slide = document.createElement("div");
-  slide.className = "panel";
-  slide.innerHTML = `<img src="${imageSrc}" alt="" />`;
-  const angle = slideNumber * angleBetweenSlides;
-  slide.style.transform = `rotateY(${angle}deg) translateZ(${orbitRadius}px)`;
-  orbit.appendChild(slide);
+const chartHeight = chart.clientHeight;
+const barWidth = 50;
+const spacing = 25;
+const maxValue = Math.max(...data.map((d) => d.value));
+*/
+
+/*
+function renderChart() {
+  data.forEach((item, i) => {
+   
+    const wrapper = document.createElement("div");
+    wrapper.className = "bar-wrapper";
+    wrapper.style.left = `${i * (barWidth + spacing) + 50}px`;
+    wrapper.style.width = `${barWidth}px`;
+
+  
+    const bar = document.createElement("div");
+    bar.className = "bar";
+    const barHeight = (item.value / maxValue) * (chartHeight - 60);
+    bar.style.height = `${barHeight}px`;
+
+   
+    const label = document.createElement("div");
+    label.className = "label";
+    label.textContent = item.label;
+
+  
+    wrapper.appendChild(bar);
+    wrapper.appendChild(label);
+    chart.appendChild(wrapper);
+
+  
+    gsap.to(bar,{
+        scaleY: 1,
+        duration:2,
+        ease: 'elastic.out(1, 1.25)',
+        delay: i * 0.1,
+
+ 
+
+    })
+
+
+
+   
+  });
+}
+
+repeat.addEventListener("click", () => {
+  chart.innerHTML = "";
+  renderChart();
 });
 
-const previewImage = document.createElement("img");
-previewImage.className = "preview-img";
-previewImage.src = slideImages[0];
-previewBox.appendChild(previewImage);
+// Initial render
+renderChart();
 
-const lerp = (from, to, amount) => from + (to - from) * amount;
-const smoothing = 0.05;
+*/
 
-let targetRotation = 0;
-let currentRotation = 0;
 
-window.addEventListener(
-  "wheel",
-  (e) => {
-    targetRotation -= e.deltaY * 0.2;
-  },
-  { passive: true },
-);
+const analyser = document.querySelector('.analyser');
 
-let shownIndex = 0;
+const data = [
 
-function showActiveSlide() {
-  const steps = Math.round(-currentRotation / angleBetweenSlides);
-  const activeIndex = ((steps % totalSlides) + totalSlides) % totalSlides;
+{month:'Januar', inntekter: 760000, driftsresultat: 16000},
+{month:'Februar', inntekter: 876000, driftsresultat: 90000},
+{month:'Mars', inntekter: 976000, driftsresultat: 10500},
+{month:'April', inntekter: 340000, driftsresultat: 52000},
+{month:'Mai', inntekter: 520000, driftsresultat: 20220},
+{month:'Juni', inntekter: 1100000, driftsresultat: 12200},
+{month:'Juli', inntekter: 1900000, driftsresultat: 9878},
+{month:'August', inntekter: 678000, driftsresultat: 20000},
+{month:'September', inntekter: 730000, driftsresultat: 45000},
+{month:'Oktober', inntekter: 860000, driftsresultat: 36000},
+{month:'November', inntekter: 765000, driftsresultat: 8732},
+{month:'Desember', inntekter: 2200000, driftsresultat: 1900}
 
-  if (activeIndex !== shownIndex) {
-    shownIndex = activeIndex;
-    previewImage.src = slideImages[activeIndex];
-    titleTag.textContent = slideTitles[activeIndex];
+]
+
+
+const chart = document.getElementById("søyle-diagram");
+
+
+const chartHeight = chart.clientHeight;
+
+const bredde = 50;
+const mellomrom = 25;
+const maxValue = Math.max(...data.map((d) => d.inntekter
+), ...data.map((d)=> d.driftsresultat));
+
+
+
+function display () {
+
+data.forEach((verdi,i)=>{
+
+
+
+    const boxmonthly = document.createElement('div');
+    boxmonthly.className = 'boxmonthly';
+    boxmonthly.style.left = `${i * (bredde + mellomrom) + 50}px`;
+    boxmonthly.style.width = `${bredde}px`;
+
+
+
+    const platen = document.createElement('div');
+    platen.className = 'platen';
+    const Høydeforboksen = (verdi.inntekter / maxValue) * (chartHeight - 60);
+    platen.style.height = `${Høydeforboksen}px`;
+
+
+    const label = document.createElement("div");
+    label.className = "label";
+    label.textContent = verdi.month;
+
+ 
+    boxmonthly.appendChild(platen);
+    boxmonthly.appendChild(label);
+    chart.appendChild(boxmonthly);
+
+  
+    gsap.to(platen,{
+        scale:1,
+        duration:2,
+        ease: 'elastic.out(1, 1.25)',
+        delay: i * 0.2,
+    })
+
+
+
+});
+
+
+ tegnYAkse(); 
+
+}
+
+
+analyser.addEventListener('click',()=>{
+ chart.innerHTML = ''
+ display();
+
+})
+
+
+display();
+
+function tegnYAkse() {
+  const antallSteg = 5;
+  const maksSoylHoyde = chartHeight - 60;   // ← SAMME linjal som søylene!
+  const steg = maksSoylHoyde / antallSteg;  // px mellom hvert merke
+
+  for (let i = 0; i <= antallSteg; i++) {
+    const verdiPaNivaa = Math.round((maxValue / antallSteg) * i);
+
+    const merke = document.createElement('div');
+    merke.className = 'y-merke';
+    merke.textContent = verdiPaNivaa.toLocaleString('no-NO');
+    merke.style.bottom = `${i * steg}px`;
+    chart.appendChild(merke);
+
+    const linje = document.createElement('div');
+    linje.className = 'grid-linje';
+    linje.style.bottom = `${i * steg}px`;
+    chart.appendChild(linje);
   }
 }
 
-const maxTilt = 30;
-let targetTiltX = 0;
-let targetTiltY = 0;
-let currentTiltX = 0;
-let currentTiltY = 0;
 
-slider.addEventListener("mousemove", (e) => {
-  const distanceFromCenterX = e.clientX / window.innerWidth - 0.5;
-  const distanceFromCenterY = e.clientY / window.innerHeight - 0.5;
-  targetTiltY = distanceFromCenterX * maxTilt;
-  targetTiltX = -distanceFromCenterY * maxTilt;
-});
 
-slider.addEventListener("mouseleave", () => {
-  targetTiltX = 0;
-  targetTiltY = 0;
-});
 
-function updateTilt() {
-  currentTiltX = lerp(currentTiltX, targetTiltX, smoothing);
-  currentTiltY = lerp(currentTiltY, targetTiltY, smoothing);
-  stage.style.transform = `rotateX(${currentTiltX}deg) rotateY(${currentTiltY}deg)`;
-}
 
-function animate() {
-  currentRotation = lerp(currentRotation, targetRotation, smoothing);
-  orbit.style.transform = `translate(-50%, -50%) rotateY(${currentRotation}deg)`;
-  previewBox.style.transform = `translate(-50%, -50%) rotateY(${-currentRotation}deg)`;
-  showActiveSlide();
-  updateTilt();
-  requestAnimationFrame(animate);
-}
 
-animate();
 
 
