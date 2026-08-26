@@ -83,118 +83,65 @@ renderChart();
 */
 
 
-const analyser = document.querySelector('.analyser');
 
 const data = [
 
-{month:'Januar', inntekter: 760000, driftsresultat: 16000},
-{month:'Februar', inntekter: 876000, driftsresultat: 90000},
-{month:'Mars', inntekter: 976000, driftsresultat: 10500},
-{month:'April', inntekter: 340000, driftsresultat: 52000},
-{month:'Mai', inntekter: 520000, driftsresultat: 20220},
-{month:'Juni', inntekter: 1100000, driftsresultat: 12200},
-{month:'Juli', inntekter: 1900000, driftsresultat: 9878},
-{month:'August', inntekter: 678000, driftsresultat: 20000},
-{month:'September', inntekter: 730000, driftsresultat: 45000},
-{month:'Oktober', inntekter: 860000, driftsresultat: 36000},
-{month:'November', inntekter: 765000, driftsresultat: 8732},
-{month:'Desember', inntekter: 2200000, driftsresultat: 1900}
+    {navn:'HAFT AS', beløp: 985000},
+    {navn:'VALDMANIS & CO AS ', beløp: 765000},
+    {navn:'Alan AS', beløp: 100000},
+    {navn:'ENGEKJÆRVEIEN 9 AS', beløp: 654000},
+    {navn:'BLØDEKJÆR 14 AS', beløp: 899000},
+    {navn:'AI AGENTEN HAC AS', beløp: 1200000},
+    {navn:'Santos AS', beløp: 90000}
 
-]
+];
 
 
-const chart = document.getElementById("søyle-diagram");
+const soylene = document.getElementById('soylene');
 
 
-const chartHeight = chart.clientHeight;
+const høyden = soylene.clientHeight;
 
-const bredde = 50;
+const bredden = 60;
 const mellomrom = 25;
-const maxValue = Math.max(...data.map((d) => d.inntekter
-), ...data.map((d)=> d.driftsresultat));
+const maxVerdi = Math.max(...data.map((d)=> d.beløp));
 
 
+function fremstillgrafen() {
+  data.forEach((objektet, i) => {
 
-function display () {
+    const parker = document.createElement('div');
+    parker.className = "parker";
+    parker.style.left = `${i * (bredden + mellomrom) + 50}px`;   // px!
+    parker.style.width = `${bredden}px`;
 
-data.forEach((verdi,i)=>{
-
-
-
-    const boxmonthly = document.createElement('div');
-    boxmonthly.className = 'boxmonthly';
-    boxmonthly.style.left = `${i * (bredde + mellomrom) + 50}px`;
-    boxmonthly.style.width = `${bredde}px`;
-
-
-
-    const platen = document.createElement('div');
-    platen.className = 'platen';
-    const Høydeforboksen = (verdi.inntekter / maxValue) * (chartHeight - 60);
-    platen.style.height = `${Høydeforboksen}px`;
-
+    const selvesøylen = document.createElement('div');
+    selvesøylen.className = 'selvesøylen';                       // tekst!
+    const høydepåsøylen = (objektet.beløp / maxVerdi) * (høyden - 60);  // riktig formel!
+    selvesøylen.style.height = `${høydepåsøylen}px`;             // mal + px!
 
     const label = document.createElement("div");
     label.className = "label";
-    label.textContent = verdi.month;
+    label.textContent = objektet.navn;
 
- 
-    boxmonthly.appendChild(platen);
-    boxmonthly.appendChild(label);
-    chart.appendChild(boxmonthly);
+    parker.appendChild(selvesøylen);
+    parker.appendChild(label);
+    soylene.appendChild(parker);
 
+    gsap.to(selvesøylen, 
+
+        { 
+          scaleY: 1,
+          duration:2.5,
+          ease: 'elastic.out(1, 1.25)',
+          delay: i * 0.5  
+        });                       
   
-    gsap.to(platen,{
-        scale:1,
-        duration:2,
-        ease: 'elastic.out(1, 1.25)',
-        delay: i * 0.2,
-    })
-
-
-
-});
-
-
- tegnYAkse(); 
-
+  
+  
+  
+    });
 }
 
-
-analyser.addEventListener('click',()=>{
- chart.innerHTML = ''
- display();
-
-})
-
-
-display();
-
-function tegnYAkse() {
-  const antallSteg = 5;
-  const maksSoylHoyde = chartHeight - 60;   // ← SAMME linjal som søylene!
-  const steg = maksSoylHoyde / antallSteg;  // px mellom hvert merke
-
-  for (let i = 0; i <= antallSteg; i++) {
-    const verdiPaNivaa = Math.round((maxValue / antallSteg) * i);
-
-    const merke = document.createElement('div');
-    merke.className = 'y-merke';
-    merke.textContent = verdiPaNivaa.toLocaleString('no-NO');
-    merke.style.bottom = `${i * steg}px`;
-    chart.appendChild(merke);
-
-    const linje = document.createElement('div');
-    linje.className = 'grid-linje';
-    linje.style.bottom = `${i * steg}px`;
-    chart.appendChild(linje);
-  }
-}
-
-
-
-
-
-
-
+fremstillgrafen();   // ← og selve kallet!
 
