@@ -113,3 +113,31 @@ color: #eaf6f6;
 
 }
 
+@media (max-width: 768px){
+    .display{
+        top: 20px;
+        left: 20px;
+        width: calc(100% - 40px);
+        height: auto;
+    }
+    .diagram {
+        width: 100%;
+        overflow-x: auto;
+    }
+    #soylene{
+        height: 55vh;
+    }
+
+
+}
+
+@media(max-width: 480px){
+    .display{
+        top: 10px;
+        left: 10px;
+        width: calc(100% -20px);
+    }
+    .label{
+        font-size: 9px;
+    }
+}
