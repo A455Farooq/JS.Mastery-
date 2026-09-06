@@ -106,27 +106,3 @@
 }
 
 
-@media (max-width: 900px){
-    .diagram{
-        height: 55vh;
-        overflow-x: auto;
-    }
-    .tekst{
-        font-size: 10px;    
-    }
-    .ytall{
-        font-size: 9px;
-        left: -60px;
-        width: 55px;
-    }
-
-}
-
-@media(max-width: 480px){
-    .diagram{
-        height: 45px;
-    }
-    .tekst{
-        font-size: 9px;
-    }
-}
