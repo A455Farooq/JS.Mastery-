@@ -9,74 +9,124 @@
     font-family: "Roboto", sans-serif;
 }
 
-.hac{
+.display{
     height: 100vh;
     width: 100%;
-    background: linear-gradient(197deg,#48cae4,#9f86c0,#cfbaf0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(196deg,#00b4d8,#0077b6,#c77dff);
     position: relative;
+    display: flex;
 }
 
-.trio{
-  position: absolute;
-  bottom: 0;
-  text-align: center;
 
+.delA{
+    
+    flex: 4;
+  
 }
 
-.selveSøylen{
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  background: linear-gradient(165deg,#2d3436);
-  border: 2px solid #00c8ff;
-  border-radius: 6px 6px 0 0;
-  transform: scaleY(0);
-  transform-origin: bottom;  
+.delB{
+ 
+  flex: 6;
+ 
 }
 
-.merke{
-  position: absolute;
-  bottom: -28px;
-  width: 100%;
-  text-align: center;
-  font-size: 16px;
-  color: #2d3436;
-}
 
-.nio{
-    top: 110px;
+.btn{
     position: absolute;
-}
-
-.bi{
-    cursor: pointer;
-    border: none;
-    outline: none;
+    padding: 10px;
     height: 100px;
     width: 100px;
-    font-size: 80px;
-    background: #80ed99;
-    top: 200px;
-    left: 200px;
     border-radius: 50%;
+    background: linear-gradient(195deg,#0dab76,#42f2f7);
+    cursor: pointer;
+    font-weight: bold;
+    top: 500px;
+    left: 250px;
+    outline: none;
+    border: none;
+    
+}
+
+.btn:hover{
+    border: 2px solid rgb(20, 29, 3);
+}
+
+
+.diagram{
     position: absolute;
+    height: 590px;
+    width: 1090px;
+    border-left: 2px solid darkblue;
+    border-bottom: 2px solid black;
+    top: 280px;
 }
 
-.bi:hover{
-    background: linear-gradient(195deg,#03045e,#1b263b,#415a77);
-    color: aliceblue;
-    transition: ease;
+.info{
+    position: absolute;
+    top: 140px;
+    right: 220px;
+    font-size: 35px;
+}
+
+.pakken{
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+   
+}
+
+.tekst{
+    position: absolute;
+    bottom: -28px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.soylen{
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(175deg,#002821,#19032c,#1e0014);
+    border: 2px solid #00c8ff;
+    border-radius: 6px 6px 0 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.ytall{
+  position: absolute;
+  left: -80px;
+  width: 75px;
+  text-align: right;
+  font-size: 21px;
+  font-weight: bold;
+  transform: translateY(50%);
 }
 
 
-.display{
-border-bottom: 2px solid black;
-border-left: 2px solid black;
-width: 1100px;
-height: 702px;
-position: absolute;
-left: 800px;
+@media (max-width: 900px){
+    .diagram{
+        height: 55vh;
+        overflow-x: auto;
+    }
+    .tekst{
+        font-size: 10px;    
+    }
+    .ytall{
+        font-size: 9px;
+        left: -60px;
+        width: 55px;
+    }
+
+}
+
+@media(max-width: 480px){
+    .diagram{
+        height: 45px;
+    }
+    .tekst{
+        font-size: 9px;
+    }
 }
