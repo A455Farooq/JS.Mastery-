@@ -9,100 +9,88 @@
     font-family: "Roboto", sans-serif;
 }
 
+
+
 .display{
+    position: relative;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(196deg,#00b4d8,#0077b6,#c77dff);
-    position: relative;
-    display: flex;
+    background: linear-gradient(220deg,#0b3b57,#0e252d,#180534);
 }
 
+.info{
 
-.delA{
-    
-    flex: 4;
-  
-}
-
-.delB{
- 
-  flex: 6;
- 
-}
-
-
-.btn{
     position: absolute;
-    padding: 10px;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background: linear-gradient(195deg,#0dab76,#42f2f7);
-    cursor: pointer;
-    font-weight: bold;
-    top: 500px;
-    left: 250px;
-    outline: none;
-    border: none;
+    height: 8vh;
     
-}
-
-.btn:hover{
-    border: 2px solid rgb(20, 29, 3);
+    text-align: center;
+    width: 100%;
+    top: 5%;
+    color: aliceblue; 
+    font-size: 27px;
+    letter-spacing: 2px;
 }
 
 
 .diagram{
+
     position: absolute;
-    height: 590px;
-    width: 1090px;
-    border-left: 2px solid darkblue;
-    border-bottom: 2px solid black;
-    top: 280px;
+    height: 600px;
+    width: 1250px;
+    border-left: 2px solid yellowgreen;
+    border-bottom: 2px solid yellowgreen;
+    top: 25%;
+    left: 25%;
+    
 }
 
-.info{
-    position: absolute;
-    top: 140px;
-    right: 220px;
-    font-size: 35px;
+.platform {
+  position: absolute;   /* nå teller left-formelen — OG prikken har sin forelder */
+  bottom:0%;
+  
+  opacity: 0.4;
 }
 
-.pakken{
-    bottom: 0;
-    position: absolute;
-    text-align: center;
-   
+.platform::after {
+  content: '';               /* ::after MÅ ha content for å finnes */
+  position: absolute;
+  bottom: 0;
+  left: 50%;                 /* midt på platformen … */
+  transform: translateX(-50%);  /* … sentrert (trikset ditt!) */
+  width: 50px;
+  height: 150px;
+       /* sirkel! */
+  border: 2px solid orangered;
 }
 
-.tekst{
+
+
+.søylen {
+
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  background: #00b894;
+  border: 2px solid #2d3436;
+  border-radius: 6px 6px 0 0;
+  transform: scaleY(0);
+  transform-origin: bottom; 
+  
+}
+
+.txt{
     position: absolute;
     bottom: -28px;
-    width: 100%;
     text-align: center;
-    font-weight: bold;
-    font-size: 20px;
+    justify-content: center;
+    font-size: 18px;
+    color: aliceblue;
 }
 
-.soylen{
+.nando{
     position: absolute;
-    bottom: 0;
-    width: 40px;
-    background: linear-gradient(175deg,#002821,#19032c,#1e0014);
-    border: 2px solid #00c8ff;
-    border-radius: 6px 6px 0 0;
-    transform: scaleY(0);
-    transform-origin: bottom;
+    left: -51px;
+    font-size: 20px;
+    transform: translateX(-50%);
+    color: rgb(111, 128, 141);
 }
-
-.ytall{
-  position: absolute;
-  left: -80px;
-  width: 75px;
-  text-align: right;
-  font-size: 21px;
-  font-weight: bold;
-  transform: translateY(50%);
-}
-
-

@@ -6,111 +6,96 @@ import Lenis from "lenis";
 gsap.registerPlugin(ScrollTrigger);
 
 
-
-const btn = document.querySelector('.btn');
-const diagram = document.querySelector('.diagram');
-
 const data = [
 
-{month:'jan',resultat:145000},
-{month:'feb',resultat:234000},
-{month:'mars',resultat:90000},
-{month:'april',resultat:65000},
-{month:'mai',resultat:500000},
-{month:'juni',resultat:320000},
-{month:'juli',resultat:96000},
-{month:'aug',resultat:439000},
-{month:'sept',resultat:133000},
-{month:'okto',resultat:76000},
-{month:'nov',resultat:88000},
-{month:'des',resultat:340000}
+{month:'jan',   omsetning:263000},
+{month:'feb',   omsetning:460000},
+{month:'mars',  omsetning:133000},
+{month:'april', omsetning:200000},
+{month:'mai',   omsetning:845000},
+{month:'jun',   omsetning:934000},
+{month:'juli',  omsetning:345000},
+{month:'aug',   omsetning:689000},
+{month:'sept',  omsetning:140000},
+{month:'okt',   omsetning:522100},
+{month:'nov',   omsetning:1000000},
+{month:'des',   omsetning:764000}
 
 ]
 
-const størstverdi = Math.max(...data.map((d)=> d.resultat))
-const høydediagram = diagram.clientHeight;
-const bredden = 60;
-const mellomrom = 25;
+const diagram = document.querySelector('.diagram');
+
+const toppverdi = Math.max(...data.map((d)=> d.omsetning));
+const bredde = 40;
+const mellomrom = 60;
+
+const høyden = diagram.clientHeight;
 
 
 
+function nio(){
 
-function bi (){
+    data.forEach((item,i)=>{
+   
+         const platform = document.createElement('div');
+         platform.className = 'platform';
+         platform.style.left = `${i * (bredde + mellomrom) + 60}px`;
+         platform.style.width = `${bredde}px`;
+   
+        
+        const søylen = document.createElement('div');
+        søylen.className = 'søylen';
+        const sHøyden = (item.omsetning / toppverdi) * 600;
+        søylen.style.height = `${sHøyden}px`;
+        
 
-data.forEach((henterdata,i)=>{
-
-
-
- const pakken = document.createElement('div');
- pakken.className = 'pakken';
- pakken.style.left = `${i * (bredden + mellomrom) + 40}px`;
- pakken.style.width = `${bredden}px`;
-
-
- const soylen = document.createElement('div');
- soylen.className = 'soylen';
- const høyde = (henterdata.resultat / størstverdi) * (høydediagram - 50);
- soylen.style.height = `${høyde}px`;
-
-
-
-
-
-
-
-const tekst = document.createElement('div');
-tekst.className = 'tekst';
-tekst.textContent = henterdata.month;
-
-pakken.appendChild(tekst);
-pakken.appendChild(soylen);
-diagram.appendChild(pakken);
+        const txt = document.createElement('div');
+        txt.className = 'txt';
+        txt.textContent = item.month;
+        
+        platform.appendChild(txt);
+        platform.appendChild(søylen);
+        diagram.appendChild(platform); 
 
 
+        gsap.to(søylen,{
 
-gsap.to(soylen,{
-    scaleY:1,
-    duration:2,
-    ease:'elastic.out(1, 1.25)',
-    delay: i * 0.2,
-})
-
+            scaleY:1,
+            duration:2,
+            delay: i * 0.2,
+            ease:'elastic.out(1, 1.25)',
 
 
-});
+        })
 
 
-ydata()
+    });
+
+
 
 }
 
 
-bi();
+function yyy() {
+
+    const antallSteg = 10;
+    const steg = (høyden/antallSteg)
+
+    for(let i = 0; i <= antallSteg; i++){
+        const tall = Math.round((toppverdi / antallSteg) * i);
+
+        const nando = document.createElement('div');
+        nando.className = 'nando';
+        nando.textContent = tall.toLocaleString('no-NO');
+        nando.style.bottom = `${steg * i}px`
+        diagram.appendChild(nando);
 
 
 
-btn.addEventListener('click',()=>{
-
-diagram.innerHTML = ''
-bi();
-
-})
-
-function ydata(){
-
-const antallSteg = 5;
-const maksSøyleHøyde = høydediagram - 50;
-const steg = maksSøyleHøyde/antallSteg;
+    }
 
 
-for(let i = 0; i <= antallSteg; i++){
-    const tall = Math.round((størstverdi/antallSteg) * i);
 
-    const merke = document.createElement('div');
-    merke.className = 'ytall';
-    merke.textContent = tall.toLocaleString('no-NO');
-    merke.style.bottom = `${i * steg}px`;
-    diagram.appendChild(merke);
 
 
 }
@@ -119,7 +104,10 @@ for(let i = 0; i <= antallSteg; i++){
 
 
 
-}
+yyy();
+nio();
+
+
 
 
 
