@@ -10,49 +10,57 @@
 }
 
 
-body{
-    background: black;
-}
+.display{
 
-
-.bilde{
- 
 display: flex;
-gap: 20px;
+flex-direction: column;
+height: 100vh;
+width: 100%;
+background: linear-gradient(210deg,#001d3d,#002855,#023e7d);
 
 }
 
 
-.bolla{
+
+.A{
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 28px;
+color: aliceblue;
+width: 100%;
+height: 25vh;
+
+
+}
+
+.B{
+display: flex;
+gap: 10px;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 50vh;
+
+
+
+    
+}
+
+.C{
+
+ width: 100%;
+ height: 25vh;
+
+    
+}
+
+.bi{
    
-    width: 450px;
-    height: 450px;
-    top: 45px;
-}
-
-
-.wave-loader {
-  display: flex;
-  gap: 9px;
-}
-
-.bar {
-  width: 21px;
-  height: 410px;
-  background: linear-gradient(180deg, #00cec9, #6c5ce7);
-  border-radius: 8px;
-  opacity: 0.8;
-}
-
-.demo{
-position: absolute;
-top: 500px;
-left: 1200px;
-}
-
-.info{
-    color: aliceblue;
-    font-size: 50px;
-    margin-left: 100px;
-    margin-top: 100px;
+    top: 100px;
+    width: 20px;
+    height: 220px;
+    background: linear-gradient(287deg,#8b816b,#c09b87,#60b087);
+    opacity: 0.9;
+    border-radius: 8px;
 }
