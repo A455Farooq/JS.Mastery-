@@ -9,58 +9,63 @@
     font-family: "Roboto", sans-serif;
 }
 
+body{
+    background: linear-gradient(275deg,#0a1128,#001f54,#0d0c1d,#161b33);
+}
+
+
+.nio{
+    position: relative;
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(275deg,#0a1128,#001f54,#0d0c1d,#161b33);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 180px;
+    gap: 8px;
+}
+
+.trio{
+   
+    
+    height: 20px;
+    width: 20px;
+    
+    border-radius: 50%;
+    border: 1.5px solid rgb(0, 255, 85);
+}
+
+
+.info{
+    font-size: 28px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    height: 10vh;
+    color: aliceblue;
+}
+
 
 .display{
-
-display: flex;
-flex-direction: column;
-height: 100vh;
-width: 100%;
-background: linear-gradient(210deg,#001d3d,#002855,#023e7d);
-
-}
-
-
-
-.A{
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 28px;
-color: aliceblue;
-width: 100%;
-height: 25vh;
-
-
-}
-
-.B{
-display: flex;
-gap: 10px;
-justify-content: center;
-align-items: center;
-width: 100%;
-height: 50vh;
-
-
-
-    
-}
-
-.C{
-
- width: 100%;
- height: 25vh;
-
-    
-}
-
-.bi{
+    position: relative;
+    height: 70vh;
+    width: 100%;
    
-    top: 100px;
-    width: 20px;
-    height: 220px;
-    background: linear-gradient(287deg,#8b816b,#c09b87,#60b087);
-    opacity: 0.9;
-    border-radius: 8px;
 }
+
+.diagram{
+
+position: absolute;    
+height: 580px;
+width: 1200px;
+top: 100px;
+left: 340px;
+border-left: 2px solid chartreuse;
+border-bottom: 2px solid chartreuse;
+
+}
+
