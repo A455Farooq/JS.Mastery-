@@ -62,10 +62,37 @@ body{
 position: absolute;    
 height: 580px;
 width: 1200px;
-top: 100px;
+top: 80px;
 left: 340px;
 border-left: 2px solid chartreuse;
 border-bottom: 2px solid chartreuse;
 
 }
 
+.boksen{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+
+
+.søylen{
+ position: absolute;
+ border-radius: 10px;
+ border: 2px solid rgb(3, 68, 101);
+ width: 50px;
+ background: linear-gradient(175deg,#00ffff,#13c9cf,#0bb5e9,#193d31,#17292b);
+ bottom: 0;
+
+transform: scaleY(0);
+transform-origin: bottom;
+
+}
+
+.txt{
+    position: absolute;
+    text-align: center;
+    bottom: -28px;
+    color: #0bb5e9;
+}

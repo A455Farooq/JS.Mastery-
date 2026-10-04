@@ -61,3 +61,65 @@ const data = [
 
 ]
 
+const mellomrom = 12;
+const bredde = 75;
+
+const toppunkt = Math.max(...data.map((d)=> d.omsetning));
+const HøydepåDiagram = diagram.clientHeight;
+
+
+
+function databehandling() {
+
+   
+    data.forEach((verdi,index)=>{
+
+    const boksen = document.createElement('div');
+    boksen.className = 'boksen';
+    boksen.style.left = `${index * (mellomrom + bredde) + 90}px`;
+    boksen.style.width = `${bredde}px`;
+ 
+    const søylen = document.createElement('div');
+    søylen.className = 'søylen';
+    const høydepåSøylen = (verdi.omsetning / toppunkt) * (HøydepåDiagram - 20);
+    søylen.style.height = `${høydepåSøylen}px`;
+   
+
+    const txt = document.createElement('div');
+    txt.className = 'txt';
+    txt.textContent = verdi.month;
+
+    
+    boksen.appendChild(txt);
+    boksen.appendChild(søylen);
+    diagram.appendChild(boksen);
+
+
+
+
+
+
+
+
+    gsap.to(søylen,{
+        scaleY:1,
+        duration:2,
+        ease:'elastic.out(1, 1.25)',
+        delay: index * 0.2,
+
+    })
+
+
+
+
+
+    });
+
+
+
+
+
+}
+
+
+databehandling();
