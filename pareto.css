@@ -9,90 +9,185 @@
     font-family: "Roboto", sans-serif;
 }
 
-body{
-    background: linear-gradient(275deg,#0a1128,#001f54,#0d0c1d,#161b33);
-}
-
-
-.nio{
-    position: relative;
-    height: 10vh;
+img{
     width: 100%;
-    background: linear-gradient(275deg,#0a1128,#001f54,#0d0c1d,#161b33);
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-top: 180px;
-    gap: 8px;
-}
-
-.trio{
-   
+    height: 100%;
+    object-fit: cover;
     
-    height: 20px;
-    width: 20px;
-    
-    border-radius: 50%;
-    border: 1.5px solid rgb(0, 255, 85);
 }
 
-
-.info{
-    font-size: 28px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-    height: 10vh;
-    color: aliceblue;
+h1{
+  font-size: clamp(3rem, 5vw, 7rem);
+  font-weight: 450;
+  letter-spacing: -2%;
+  line-height: 1;
 }
 
-
-.display{
-    position: relative;
-    height: 70vh;
-    width: 100%;
-   
+h3 {
+  font-size: clamp(2rem, 4vw, 6rem);
+  font-weight: 450;
+  letter-spacing: -2%;
+  line-height: 1;
 }
 
-.diagram{
-
-position: absolute;    
-height: 580px;
-width: 1200px;
-top: 80px;
-left: 340px;
-border-left: 2px solid chartreuse;
-border-bottom: 2px solid chartreuse;
-
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  mix-blend-mode: difference;
+  z-index: 10;
+ 
 }
 
-.boksen{
-    position: absolute;
-    bottom: 0;
-    text-align: center;
+.nav-logo,
+.nav-toggler {
+  padding: 1rem;
+  cursor: pointer;
+  transform: translateX(0px);
+  will-change: transform;
 }
 
-
-
-.søylen{
- position: absolute;
- border-radius: 10px;
- border: 2px solid rgb(3, 68, 101);
- width: 50px;
- background: linear-gradient(175deg,#00ffff,#13c9cf,#0bb5e9,#193d31,#17292b);
- bottom: 0;
-
-transform: scaleY(0);
-transform-origin: bottom;
-
+.nav-logo {
+  width: 8rem;
 }
 
-.txt{
-    position: absolute;
-    text-align: center;
-    bottom: -28px;
-    color: #0bb5e9;
+.nav-toggler {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
+
+.nav-toggler span {
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.4s ease;
+}
+
+.nav-toggler.open span:first-child {
+  transform: translateY(3.5px) rotate(45deg) scaleX(0.75);
+}
+
+.nav-toggler.open span:nth-child(2) {
+  transform: translateY(-3.5px) rotate(-45deg) scaleX(0.75);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  background-color: #0a0a0a;
+  overflow: hidden;
+}
+
+.menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50svh;
+  padding: 6rem 2.5rem 2.5rem 2.5rem;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.menu-col {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-col a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -1%;
+  line-height: 1.25;
+}
+
+.menu-col a .word {
+  position: relative;
+  transform: translateY(100%);
+  will-change: transform;
+}
+
+.page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  overflow-y: auto;
+  transform: translateY(0svh) scale(1);
+  border-radius: 0px;
+  will-change: transform, border-radius;
+  z-index: 2;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero {
+  color: #fff;
+  background: url("/hero.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.about {
+  background-color: #e3e3e3;
+  color: #000;
+}
+
+.outro {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.hero h1,
+.about h3,
+.outro h3 {
+  text-align: center;
+  width: 50%;
+}
+
+@media (max-width: 1000px) {
+  .menu-container {
+    height: 65svh;
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .menu-col a {
+    font-size: 1.75rem;
+  }
+
+  .hero h1,
+  .about h3,
+  .outro h3 {
+    width: calc(100% - 5rem);
+  }
+}
+

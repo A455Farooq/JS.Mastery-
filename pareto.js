@@ -1,125 +1,85 @@
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText);
 
 
+const page = document.querySelector(".page");
+const navLogo = document.querySelector(".nav-logo");
+const navToggler = document.querySelector(".nav-toggler");
+const menuCols = document.querySelectorAll(".menu-col");
+const isMobile = window.matchMedia("(max-width: 999px)");
 
-const minisirkel = document.querySelectorAll('.trio');
+const lenis = new Lenis({ wrapper: page, content: page, autoRaf: true });
 
-minisirkel.forEach((nio,index)=>{
+SplitText.create(".menu-col a", {
+  type: "words",
+  wordsClass: "word",
+  mask: "words",
+});
 
+let isNavHidden = false;
 
-    gsap.fromTo(nio,{
+lenis.on("scroll", ({ direction }) => {
+  const hide = direction === 1;
+  if (hide === isNavHidden) return;
+  isNavHidden = hide;
 
-         background:'',
-         opacity:0,
-         scale:0.1
+  gsap.to(navLogo, {
+    x: hide ? -300 : 0,
+    duration: 1.5,
+    ease: "power3.out",
+    overwrite: true,
+  });
+  gsap.to(navToggler, {
+    x: hide ? 300 : 0,
+    duration: 1,
+    ease: "power3.out",
+    overwrite: true,
+  });
+});
 
-    },{
-   
-        opacity:1,
-        duration:0.9,
-        scale:1.2,
-        ease:'sine.inOut',
-        repeat:-1,
-        yoyo:true,
-        delay: index * 0.1,
-       
+let isMenuOpen = false;
+let tl;
 
+navToggler.addEventListener("click", () => {
+  isMenuOpen = !isMenuOpen;
+  navToggler.classList.toggle("open", isMenuOpen);
+  isMenuOpen ? lenis.stop() : lenis.start();
 
-    })
+  tl?.kill();
+  tl = gsap.timeline();
 
+  tl.to(page, {
+    y: isMenuOpen ? (isMobile.matches ? "65svh" : "50svh") : 0,
+    scale: isMenuOpen ? (isMobile.matches ? 0.85 : 0.95) : 1,
+    borderRadius: isMenuOpen ? "20px" : "0px",
+    duration: 1,
+    ease: "power3.inOut",
+  });
 
-
-
-
-
-
-})
-
-
-
-const diagram = document.querySelector('.diagram');
-
-const data = [
-
-   {month:'januar',omsetning:1200000},
-   {month:'februar',omsetning:900000},
-   {month:'mars',omsetning:650000},
-   {month:'april',omsetning:865200},
-   {month:'mai',omsetning:432000},
-   {month:'juni',omsetning:231000},
-   {month:'juli',omsetning:140000},
-   {month:'august',omsetning:398156},
-   {month:'september',omsetning:100000},
-   {month:'oktober',omsetning:1500000},
-   {month:'november',omsetning:699000},
-   {month:'desember',omsetning:766000}
-
-]
-
-const mellomrom = 12;
-const bredde = 75;
-
-const toppunkt = Math.max(...data.map((d)=> d.omsetning));
-const HøydepåDiagram = diagram.clientHeight;
-
-
-
-function databehandling() {
-
-   
-    data.forEach((verdi,index)=>{
-
-    const boksen = document.createElement('div');
-    boksen.className = 'boksen';
-    boksen.style.left = `${index * (mellomrom + bredde) + 90}px`;
-    boksen.style.width = `${bredde}px`;
- 
-    const søylen = document.createElement('div');
-    søylen.className = 'søylen';
-    const høydepåSøylen = (verdi.omsetning / toppunkt) * (HøydepåDiagram - 20);
-    søylen.style.height = `${høydepåSøylen}px`;
-   
-
-    const txt = document.createElement('div');
-    txt.className = 'txt';
-    txt.textContent = verdi.month;
-
-    
-    boksen.appendChild(txt);
-    boksen.appendChild(søylen);
-    diagram.appendChild(boksen);
-
-
-
-
-
-
-
-
-    gsap.to(søylen,{
-        scaleY:1,
-        duration:2,
-        ease:'elastic.out(1, 1.25)',
-        delay: index * 0.2,
-
-    })
-
-
-
-
-
+  menuCols.forEach((col) => {
+    col.querySelectorAll("a").forEach((link, i) => {
+      tl.to(
+        link.querySelectorAll(".word"),
+        {
+          y: isMenuOpen ? "0%" : "100%",
+          duration: isMenuOpen ? 1 : 0.75,
+          ease: "power3.out",
+        },
+        isMenuOpen ? 0.65 + i * 0.1 : 0.1,
+      );
     });
+  });
+});
 
 
 
 
 
-}
 
 
-databehandling();
